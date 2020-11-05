@@ -1,0 +1,14 @@
+{
+"companyName": "Shiny Fruit LLC",
+"productName": "Word Game One",
+"dataUrl": "WordGameOne.1.0.0.6_BundleV2.WebGL.data.unityweb",
+"wasmCodeUrl": "WordGameOne.1.0.0.6_BundleV2.WebGL.wasm.code.unityweb",
+"wasmFrameworkUrl": "WordGameOne.1.0.0.6_BundleV2.WebGL.wasm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "WordGameOne.1.0.0.6_BundleV2.WebGL.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}

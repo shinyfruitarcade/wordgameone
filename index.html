@@ -1,25 +1,134 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Word Game One</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Word Game One | Shiny Fruit Arcade</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WordGameOne.1.0.0.6_BundleV2.WebGL.json", {onProgress: UnityProgress});
+    var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json");
     </script>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet" >
+    <link href="css/animate.min.css" rel="stylesheet" >
+    <link href="css/scrolling-animation.css" rel="stylesheet" >
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+      #gameContainer { width: 100vw; height: 100vh; }
+      canvas { width: 100%; height: 100%; }
+    </style>
   </head>
   <body>
-    <div class="webgl-content">
-      <div id="gameContainer" style="width: 600px; height: 960px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
-        <div class="title">Word Game One</div>
+<!--NAVIGATION-->
+     <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                 </button>
+                 <a href="#" class="navbar-left"><img src="img/sfl.png" class="tinysfl"></a>
+                 <a href="" class="navbar-brand">Shiny Fruit Arcade</a>
+             </div>
+             <div class="navbar-collapse collaspe">
+                 <ul class="nav navbar-nav navbar-right">
+                     <!--- <li><a href="#header">Home</a></li> --->
+                     <li><a href="https://gpt.shinyfruitllc.com#games">Games</a></li>
+                     <!--- <li><a href="#services">Services</a></li> --->
+                     <!--- <li><a href="#team">Team</a></li> --->
+                     <!--- <li><a href="#builtWith">Clients</a></li> --->
+                     <li><a href="#contact">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+     </div>
+
+<!--- End Navigation --->
+   <!--- Header --->
+  <div id="header" class="header">
+    <div class="container">
+      <div class="col-lg-2 col-md-2">
+        <div class="game">
+
+        <h4>Word Game One</h4>
+        <img src="img/games/WordGameOne-LogoV1-Icon-512x512px.png">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/IVANozgZUGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
+        <h4>Fun Word Game</h4>
+        <p>Clear letters by spelling the words in the falling blocks clear. See what you can find.</p>
+        <hr>
+        <li>Android</li>
+        <a href='https://play.google.com/store/apps/details?id=com.shinyfruitllc.games.two_thousand_nineteen.december.seventeenth.wordgameone_free&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
+</div>
+
       </div>
+      <div class="col-lg-8 col-md-8">
+        <div class="centered" style="
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 480px; height: 800px;">
+        <div class="center-block" id="unityContainer" style="width: 480px; height: 800px; background-color: blue; margin: auto;"></div>
+        </div>
+      </div>
+      <div class="col-lg-2 col-md-2"></div>
     </div>
+  </div>
+
+
+
+
+
+
+<!--- footer --->
+  <div id="footer" class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-4 col-md-4">
+                <h4>Contat Us</h4>
+                <p><a href="mailto:arcade@shinyfruitllc.com"><i class="fa fa-envelope" aria-hidden="true"></i>arcade@shinyfruitllc.com</p></a>
+                <p><a href="https://www.shinyfruitllc.com"><i class="fa fa-globe" aria-hidden="true"></i>www.shinyfruitllc.com</p></a>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                  <h4>About</h4>
+                  <p><a href="privacy-policy-web.html"><i class="fa fa-square-o" aria-hidden="true"></i>Privacy</p></a>
+              </div>
+              <div class="col-lg-4 col-md-4">
+                <h4>Stay in touch</h4>
+                 <!---- <i class="social fa fa-facebook" aria-hidden="true"></i> ---->
+                 <a href="https://twitter.com/ShinyFruitLLC"><i class="social fa fa-twitter" aria-hidden="true"></i></a>
+                 <!---- <i class="social fa fa-google-plus" aria-hidden="true"></i> ---->
+                 <a href="https://www.youtube.com/channel/UCLj12O25ostcVnpK39K4_tw"><i class="social fa fa-youtube" aria-hidden="true"></i></a>
+                 <a href="https://github.com/shinyfruitllc"><i class="social fa fa-github" aria-hidden="true"></i><br></a>
+                 <!-- <input type="email" placeholder="Subscribe For Updates"><button class="btn btn-success">Subscribe</button> -->
+
+                </div>
+          </div>
+      </div>
+  </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scrolling-animation.js"></script>
+
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/waypoints.js"></script>
   </body>
 </html>
